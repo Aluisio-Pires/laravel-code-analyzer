@@ -13,7 +13,7 @@
             "email": "aluisiopireseng@gmail.com"
         }
     ],
-    "require-dev": {
+    "require": {
         "illuminate/support": "^12.2",
         "rector/rector": "^2.0",
         "larastan/larastan": "^3.2",
