@@ -15,8 +15,8 @@
     ],
     "require": {
         "rector/rector": "^2.0",
-        "larastan/larastan": "^3.2",
-        "laravel/pint": "^1.21"
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.0"
     },
     "extra": {
         "laravel": {
