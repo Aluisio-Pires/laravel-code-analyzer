@@ -2,11 +2,11 @@
 
 namespace Aluisio\LaravelCodeAnalyzer;
 
-use Illuminate\Support\ServiceProvider;
-use Aluisio\LaravelCodeAnalyzer\Commands\PintCommand;
-use Aluisio\LaravelCodeAnalyzer\Commands\PhpStanCommand;
-use Aluisio\LaravelCodeAnalyzer\Commands\RectorCommand;
 use Aluisio\LaravelCodeAnalyzer\Commands\AnalyseCommand;
+use Aluisio\LaravelCodeAnalyzer\Commands\PhpStanCommand;
+use Aluisio\LaravelCodeAnalyzer\Commands\PintCommand;
+use Aluisio\LaravelCodeAnalyzer\Commands\RectorCommand;
+use Illuminate\Support\ServiceProvider;
 
 class LaravelCodeAnalyzerServiceProvider extends ServiceProvider
 {
@@ -18,5 +18,16 @@ class LaravelCodeAnalyzerServiceProvider extends ServiceProvider
             RectorCommand::class,
             AnalyseCommand::class,
         ]);
+    }
+
+    public function register(): void
+    {
+        if (! file_exists(base_path('rector.php'))) {
+            $this->mergeConfigFrom(__DIR__.'/../stubs/config/rector.php', 'rector');
+        }
+
+        if (! file_exists(base_path('phpstan.neon'))) {
+            copy(__DIR__.'/../stubs/config/phpstan.neon', base_path('phpstan.neon'));
+        }
     }
 }

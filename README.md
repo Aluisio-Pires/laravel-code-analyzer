@@ -16,6 +16,14 @@ Laravel should automatically discover the service provider. If not, add the foll
 Aluisio\LaravelCodeAnalyzer\LaravelCodeAnalyzerServiceProvider::class,
 ```
 
+### Publish Configuration Files (Optional)
+
+If your project does not already have configuration files for Rector and PHPStan, you can publish default configurations:
+
+```bash
+php artisan vendor:publish --tag=laravel-code-analyzer-config
+```
+
 ## Usage
 
 The package provides the following Artisan commands:

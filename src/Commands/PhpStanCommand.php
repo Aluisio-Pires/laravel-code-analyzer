@@ -8,6 +8,7 @@ use Symfony\Component\Process\Process;
 class PhpStanCommand extends Command
 {
     protected $signature = 'phpstan {args?* : PhpStan arguments}';
+
     protected $description = 'Runs PhpStan';
 
     public function handle(): int

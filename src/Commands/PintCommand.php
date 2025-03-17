@@ -8,6 +8,7 @@ use Symfony\Component\Process\Process;
 class PintCommand extends Command
 {
     protected $signature = 'pint {args?* : Pint arguments}';
+
     protected $description = 'Runs Pint';
 
     public function handle(): int

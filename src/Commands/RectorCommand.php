@@ -8,6 +8,7 @@ use Symfony\Component\Process\Process;
 class RectorCommand extends Command
 {
     protected $signature = 'rector {args?* : Rector arguments}';
+
     protected $description = 'Runs Rector';
 
     public function handle(): int
