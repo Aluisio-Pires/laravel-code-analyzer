@@ -23,7 +23,7 @@ class LaravelCodeAnalyzerServiceProvider extends ServiceProvider
     public function register(): void
     {
         if (! file_exists(base_path('rector.php'))) {
-            copy(__DIR__.'/../stubs/config/rector.php', 'rector');
+            copy(__DIR__.'/../stubs/config/rector.php', 'rector.php');
         }
 
         if (! file_exists(base_path('phpstan.neon'))) {
