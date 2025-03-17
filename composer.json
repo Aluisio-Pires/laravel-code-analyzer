@@ -14,7 +14,6 @@
         }
     ],
     "require": {
-        "illuminate/support": "^12.2",
         "rector/rector": "^2.0",
         "larastan/larastan": "^3.2",
         "laravel/pint": "^1.21"
