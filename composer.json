@@ -15,5 +15,12 @@
     ],
     "require-dev": {
         "illuminate/support": "^12.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aluisio\\LaravelCodeAnalyzer\\LaravelCodeAnalyzerServiceProvider"
+            ]
+        }
     }
 }
