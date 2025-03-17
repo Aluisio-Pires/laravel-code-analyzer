@@ -12,13 +12,11 @@ class LaravelCodeAnalyzerServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                PintCommand::class,
-                PhpStanCommand::class,
-                RectorCommand::class,
-                AnalyseCommand::class,
-            ]);
-        }
+        $this->commands([
+            PintCommand::class,
+            PhpStanCommand::class,
+            RectorCommand::class,
+            AnalyseCommand::class,
+        ]);
     }
 }
