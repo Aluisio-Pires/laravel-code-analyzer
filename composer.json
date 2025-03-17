@@ -1,0 +1,19 @@
+{
+    "name": "aluisio/laravel-code-analyzer",
+    "description": "Create new artisan commands to simplify your code quality workflow",
+    "license": "none",
+    "autoload": {
+        "psr-4": {
+            "Aluisio\\LaravelCodeAnalyzer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aluisio Pires",
+            "email": "aluisiopireseng@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "illuminate/support": "^12.2"
+    }
+}
