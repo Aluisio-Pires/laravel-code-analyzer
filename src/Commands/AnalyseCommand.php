@@ -14,8 +14,8 @@ class AnalyseCommand extends Command
     public function handle(): int
     {
         $commands = [
-            ['./vendor/bin/pint'],
             ['./vendor/bin/rector'],
+            ['./vendor/bin/pint'],
             ['./vendor/bin/phpstan', 'analyse'],
         ];
 
